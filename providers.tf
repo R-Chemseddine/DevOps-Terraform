@@ -6,10 +6,15 @@ terraform {
     }
   }
   required_version = ">= 1.0.0"
+
+  backend "http" {
+    address = "https://terraform-backend.edu.artheriom.fr/cerachdi"
+  }
 }
 
 # On demande à Terraform d'utiliser le provider téléchargé à l'instant
 provider "openstack" {
   cloud = "chems application"
 }
+
 
