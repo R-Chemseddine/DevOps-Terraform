@@ -59,10 +59,10 @@ resource "openstack_networking_floatingip_v2" "float_ip_1" {
 
 ###########
 
-resource "openstack_networking_port_v2" "port_1" {
-  network_id = openstack_networking_network_v2.network.id
-  device_id = openstack_compute_instance_v2.instance.id
-}
+#resource "openstack_networking_port_v2" "port_1" {
+#  network_id = openstack_networking_network_v2.network.id
+#  device_id = openstack_compute_instance_v2.instance.id
+#}
 
 resource "openstack_compute_floatingip_associate_v2" "fip_1" {
   floating_ip = openstack_networking_floatingip_v2.float_ip_1.address
